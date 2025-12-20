@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision Career Guide - Complete Documentation</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+            h1 { page-break-before: always; }
+            h1:first-of-type { page-break-before: avoid; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2563eb;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #1e40af;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .download-btn {
+            background: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 20px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+        }
+        
+        .download-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        h1 {
+            color: #1e40af;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h2 {
+            color: #2563eb;
+            margin-top: 30px;
+            padding-left: 10px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        h3 {
+            color: #3b82f6;
+            margin-top: 20px;
+        }
+        
+        h4 {
+            color: #60a5fa;
+            margin-top: 15px;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #dc2626;
+        }
+        
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        
+        .note {
+            background: #dbeafe;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background: #fee2e2;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #2563eb;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        
+        .toc {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .project-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37,99,235,0.1);
+        }
+        
+        .project-title {
+            color: #1e40af;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .project-type {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 10px;
+        }
+        
+        .project-level {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        
+        .level-beginner { background: #10b981; color: white; }
+        .level-intermediate { background: #f59e0b; color: white; }
+        .level-advanced { background: #dc2626; color: white; }
+        
+        strong {
+            color: #1e40af;
+        }
+        
+        em {
+            color: #6b7280;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Complete Computer Vision Career Path Guide</h1>
+            <p><strong>IT Companies & Drone Companies</strong></p>
+            <p>A Comprehensive Roadmap for Aspiring Computer Vision Engineers</p>
+            <button class="download-btn no-print" onclick="window.print()">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                Save as PDF (Ctrl+P)
+            </button>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc no-print">
+            <h2>📚 Table of Contents</h2>
+            <ul>
+                <li><a href="#overview">Executive Overview</a></li>
+                <li><a href="#foundations">Part 1: Foundational Knowledge</a></li>
+                <li><a href="#core-cv">Part 2: Core Computer Vision</a></li>
+                <li><a href="#it-requirements">Part 3: IT Company Requirements</a></li>
+                <li><a href="#drone-requirements">Part 4: Drone Company Requirements</a></li>
+                <li><a href="#learning-roadmap">Part 5: Learning Roadmap</a></li>
+                <li><a href="#projects">Part 6: Project Portfolio Guide</a></li>
+                <li><a href="#tools">Part 7: Essential Tools</a></li>
+                <li><a href="#certifications">Part 8: Certifications</a></li>
+                <li><a href="#interview">Part 9: Interview Preparation</a></li>
+                <li><a href="#resources">Part 10: Resources</a></li>
+            </ul>
+        </div>
+
+        <div id="overview" class="page-break">
+            <h1>📊 Executive Summary</h1>
+            <div class="section">
+                <p>Computer vision is experiencing explosive growth, driven by AI advancements, autonomous systems, and real-time processing capabilities. This guide outlines the comprehensive learning path for roles in both traditional IT companies (focusing on software applications, cloud deployment, and scalable AI solutions) and drone-based companies (emphasizing real-time embedded systems, navigation, and aerial intelligence).</p>
+            </div>
+        </div>
+
+        <div id="foundations" class="page-break">
+            <h1>Part 1: Foundational Knowledge (Common for Both Paths)</h1>
+            
+            <h2>1.1 Mathematical Foundations</h2>
+            
+            <div class="section">
+                <h3>Linear Algebra</h3>
+                <ul>
+                    <li>Vectors, matrices, and tensor operations</li>
+                    <li>Eigenvalues, eigenvectors, and matrix decomposition</li>
+                    <li>Transformations and projections</li>
+                    <li><strong>Practical:</strong> Implement matrix operations from scratch in NumPy</li>
+                </ul>
+                
+                <h3>Calculus & Optimization</h3>
+                <ul>
+                    <li>Derivatives, gradients, and Jacobians</li>
+                    <li>Gradient descent and its variants (SGD, Adam, RMSprop)</li>
+                    <li>Backpropagation mathematics</li>
+                    <li><strong>Practical:</strong> Build a simple neural network without frameworks</li>
+                </ul>
+                
+                <h3>Probability & Statistics</h3>
+                <ul>
+                    <li>Probability distributions (Gaussian, Poisson, etc.)</li>
+                    <li>Bayesian inference and maximum likelihood estimation</li>
+                    <li>Statistical hypothesis testing</li>
+                    <li><strong>Practical:</strong> Implement Kalman filters for object tracking</li>
+                </ul>
+            </div>
+
+            <h2>1.2 Programming Foundations</h2>
+            
+            <div class="section">
+                <h3>Core Languages</h3>
+                <ul>
+                    <li><strong>Python:</strong> Primary language for CV/ML (NumPy, SciPy, Matplotlib)</li>
+                    <li><strong>C++:</strong> Essential for performance-critical applications and embedded systems</li>
+                    <li><strong>CUDA/OpenCL:</strong> GPU programming for acceleration</li>
+                </ul>
+                
+                <h3>Version Control & Collaboration</h3>
+                <ul>
+                    <li>Git/GitHub workflows</li>
+                    <li>Code review practices</li>
+                    <li>CI/CD pipelines for ML projects</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="core-cv" class="page-break">
+            <h1>Part 2: Core Computer Vision Concepts</h1>
+            
+            <h2>2.1 Image Processing Fundamentals</h2>
+            
+            <div class="section">
+                <h3>Theory</h3>
+                <ul>
+                    <li>Image formation and camera models</li>
+                    <li>Color spaces (RGB, HSV, LAB, YUV)</li>
+                    <li>Filtering (Gaussian, median, bilateral)</li>
+                    <li>Edge detection (Sobel, Canny, Laplacian)</li>
+                    <li>Morphological operations</li>
+                    <li>Histogram equalization and adaptive techniques</li>
+                </ul>
+                
+                <h3>Practical Projects</h3>
+                <ul>
+                    <li>Build a document scanner with perspective correction</li>
+                    <li>Create an HDR image fusion tool</li>
+                    <li>Implement panorama stitching from scratch</li>
+                </ul>
+            </div>
+
+            <h2>2.2 Feature Detection & Matching</h2>
+            
+            <div class="section">
+                <h3>Theory</h3>
+                <ul>
+                    <li>Corner detection (Harris, Shi-Tomasi)</li>
+                    <li>Scale-invariant features (SIFT, SURF, ORB)</li>
+                    <li>Feature descriptors and matching algorithms</li>
+                    <li>RANSAC for robust estimation</li>
+                </ul>
+                
+                <h3>Practical Projects</h3>
+                <ul>
+                    <li>Object recognition using feature matching</li>
+                    <li>Image alignment and registration</li>
+                    <li>3D reconstruction from multiple views</li>
+                </ul>
+            </div>
+
+            <h2>2.3 Deep Learning for Computer Vision</h2>
+            
+            <div class="section">
+                <h3>Convolutional Neural Networks (CNNs)</h3>
+                <ul>
+                    <li>Architecture fundamentals (convolution, pooling, activation)</li>
+                    <li>Classic architectures: LeNet, AlexNet, VGG, ResNet, EfficientNet</li>
+                    <li>Modern architectures: Vision Transformers (ViT), Swin Transformers</li>
+                    <li>Transfer learning and fine-tuning strategies</li>
+                </ul>
+                
+                <h3>Object Detection</h3>
+                <ul>
+                    <li>Two-stage detectors: R-CNN, Fast R-CNN, Faster R-CNN</li>
+                    <li>Single-stage detectors: YOLO (v5, v8, v11), SSD, RetinaNet</li>
+                    <li>Anchor-free detectors: FCOS, CenterNet</li>
+                    <li>Evaluation metrics: mAP, IoU, precision-recall curves</li>
+                </ul>
+                
+                <h3>Semantic & Instance Segmentation</h3>
+                <ul>
+                    <li>FCN, U-Net, DeepLab family</li>
+                    <li>Mask R-CNN for instance segmentation</li>
+                    <li>Panoptic segmentation approaches</li>
+                </ul>
+                
+                <div class="note">
+                    <h3>Advanced Topics</h3>
+                    <ul>
+                        <li>3D vision: depth estimation, point clouds, NeRF</li>
+                        <li>Video understanding: optical flow, action recognition</li>
+                        <li>Generative models: GANs, diffusion models</li>
+                        <li>Self-supervised learning: MAE, DINO, SimCLR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="it-requirements" class="page-break">
+            <h1>Part 3: IT Company Requirements</h1>
+            
+            <h2>3.1 Technical Skills</h2>
+            
+            <div class="section">
+                <h3>Frameworks & Libraries</h3>
+                <ul>
+                    <li><strong>Deep Learning:</strong> PyTorch (primary), TensorFlow/Keras</li>
+                    <li><strong>Computer Vision:</strong> OpenCV, scikit-image, Pillow</li>
+                    <li><strong>Object Detection:</strong> Ultralytics, Detectron2, MMDetection</li>
+                    <li><strong>Model Optimization:</strong> ONNX, TensorRT, OpenVINO</li>
+                </ul>
+                
+                <h3>Cloud & MLOps</h3>
+                <ul>
+                    <li><strong>Cloud Platforms:</strong> AWS (SageMaker, Lambda, S3), GCP (Vertex AI), Azure (ML Studio)</li>
+                    <li><strong>Containerization:</strong> Docker, Kubernetes</li>
+                    <li><strong>ML Pipeline Tools:</strong> MLflow, Kubeflow, DVC</li>
+                    <li><strong>Experiment Tracking:</strong> Weights & Biases, Neptune.ai</li>
+                </ul>
+                
+                <h3>APIs & Web Services</h3>
+                <ul>
+                    <li>RESTful API design (Flask, FastAPI)</li>
+                    <li>GraphQL for complex queries</li>
+                    <li>WebSocket for real-time streaming</li>
+                    <li>Microservices architecture</li>
+                </ul>
+            </div>
+
+            <h2>3.2 Specialized Domains</h2>
+            
+            <div class="section">
+                <h3>E-commerce & Retail</h3>
+                <ul>
+                    <li>Visual search and product recommendation</li>
+                    <li>Virtual try-on and AR applications</li>
+                    <li>Inventory management with shelf detection</li>
+                    <li>Quality control and defect detection</li>
+                </ul>
+                
+                <h3>Healthcare & Medical Imaging</h3>
+                <ul>
+                    <li>Medical image analysis (X-ray, MRI, CT scans)</li>
+                    <li>Disease detection and diagnosis assistance</li>
+                    <li>DICOM standard and healthcare data formats</li>
+                    <li>Regulatory compliance (HIPAA, FDA)</li>
+                </ul>
+                
+                <h3>Security & Surveillance</h3>
+                <ul>
+                    <li>Anomaly detection in video streams</li>
+                    <li>Crowd analysis and behavior recognition</li>
+                    <li>License plate recognition</li>
+                    <li>Facial recognition with privacy considerations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="drone-requirements" class="page-break">
+            <h1>Part 4: Drone Company Requirements</h1>
+            
+            <h2>4.1 Drone-Specific Computer Vision</h2>
+            
+            <div class="section">
+                <h3>Navigation & Localization</h3>
+                <ul>
+                    <li><strong>Visual Odometry:</strong> Estimate camera motion from image sequences</li>
+                    <li><strong>SLAM:</strong> ORB-SLAM, LSD-SLAM for simultaneous localization and mapping</li>
+                    <li><strong>VIO:</strong> Fusion of camera and IMU data</li>
+                    <li>Marker-based localization (ArUco, AprilTags)</li>
+                </ul>
+                
+                <h3>Obstacle Detection & Avoidance</h3>
+                <ul>
+                    <li>Stereo vision and depth estimation</li>
+                    <li>Optical flow for motion detection</li>
+                    <li>3D occupancy mapping</li>
+                    <li>Real-time path planning algorithms</li>
+                </ul>
+                
+                <h3>Aerial Image Analysis</h3>
+                <ul>
+                    <li>Orthomosaic generation and georeferencing</li>
+                    <li>3D reconstruction from aerial imagery</li>
+                    <li>Change detection in satellite/drone imagery</li>
+                    <li>Agricultural analysis (NDVI, crop health)</li>
+                </ul>
+            </div>
+
+            <h2>4.2 Embedded Systems & Real-time Processing</h2>
+            
+            <div class="section">
+                <h3>Hardware Platforms</h3>
+                <ul>
+                    <li><strong>NVIDIA Jetson:</strong> Nano, Xavier NX, AGX Orin for GPU-accelerated edge AI</li>
+                    <li><strong>Intel RealSense:</strong> Depth cameras with SDK</li>
+                    <li><strong>Raspberry Pi + Coral TPU:</strong> Lightweight inference</li>
+                    <li><strong>Qualcomm Snapdragon Flight:</strong> Specialized drone processors</li>
+                </ul>
+                
+                <h3>Real-time Operating Systems</h3>
+                <ul>
+                    <li>ROS (Robot Operating System) / ROS2</li>
+                    <li>PX4 and ArduPilot flight stacks</li>
+                    <li>Real-time Linux kernel configuration</li>
+                </ul>
+            </div>
+
+            <h2>4.3 Specialized Applications</h2>
+            
+            <div class="section">
+                <h3>Inspection & Surveying</h3>
+                <ul>
+                    <li>Infrastructure inspection (bridges, power lines)</li>
+                    <li>Thermal imaging analysis</li>
+                    <li>Photogrammetry and 3D modeling</li>
+                </ul>
+                
+                <h3>Agriculture</h3>
+                <ul>
+                    <li>Crop monitoring and health assessment</li>
+                    <li>Precision spraying with computer vision</li>
+                    <li>Livestock tracking and counting</li>
+                </ul>
+                
+                <h3>Search & Rescue</h3>
+                <ul>
+                    <li>Person detection in challenging environments</li>
+                    <li>Thermal imaging for night operations</li>
+                    <li>Autonomous grid search patterns</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="learning-roadmap" class="page-break">
+            <h1>Part 5: Learning Roadmap (Timeline-Based)</h1>
+            
+            <h2>Phase 1: Foundations (3-4 months)</h2>
+            <div class="section">
+                <h3>Months 1-2: Math & Programming</h3>
+                <ul>
+                    <li>Complete linear algebra and calculus courses</li>
+                    <li>Master Python for data science</li>
+                    <li>Learn C++ basics</li>
+                </ul>
+                
+                <h3>Months 3-4: Classical Computer Vision</h3>
+                <ul>
+                    <li>Study image processing fundamentals</li>
+                    <li>Implement algorithms from scratch</li>
+                    <li>Complete OpenCV tutorials</li>
+                </ul>
+            </div>
+
+            <h2>Phase 2: Deep Learning Specialization (4-5 months)</h2>
+            <div class="section">
+                <h3>Months 5-6: Deep Learning Basics</h3>
+                <ul>
+                    <li>Complete deep learning course (Fast.ai, Coursera)</li>
+                    <li>Understand CNN architectures deeply</li>
+                    <li>Implement networks from scratch in PyTorch</li>
+                </ul>
+                
+                <h3>Months 7-9: Advanced CV with DL</h3>
+                <ul>
+                    <li>Study object detection, segmentation, tracking</li>
+                    <li>Work with YOLO, Mask R-CNN, DeepSORT</li>
+                    <li>Build 3-5 substantial projects</li>
+                    <li>Participate in Kaggle competitions</li>
+                </ul>
+            </div>
+
+            <h2>Phase 3: Specialization (3-4 months)</h2>
+            <div class="section">
+                <h3>For IT Path:</h3>
+                <ul>
+                    <li>Study MLOps and deployment strategies</li>
+                    <li>Learn cloud platforms (AWS/GCP)</li>
+                    <li>Build end-to-end production pipelines</li>
+                </ul>
+                
+                <h3>For Drone Path:</h3>
+                <ul>
+                    <li>Learn ROS/ROS2 thoroughly</li>
+                    <li>Study SLAM and VIO algorithms</li>
+                    <li>Work with embedded platforms (Jetson)</li>
+                    <li>Build autonomous navigation projects</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects" class="page-break">
+            <h1>Part 6: Project Portfolio Guide</h1>
+            
+            <h2>6.1 Beginner Level Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">Object Detection System</div>
+                <span class="project-type">IT Company</span>
+                <span class="project-level level-beginner">Beginner</span>
+                <h3>Smart Retail Product Detector</h3>
+                <p><strong>Description:</strong> Detect and count products on store shelves for inventory management</p>
+                <p><strong>Technologies:</strong> YOLOv8, FastAPI, Docker, AWS</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Real-time detection with bounding boxes</li>
+                    <li>REST API with web dashboard</li>
+                    <li>Export results to CSV/JSON</li>
+                    <li>Response time < 2 seconds</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Object Detection System</div>
+                <span class="project-type">Drone Company</span>
+                <span class="project-level level-beginner">Beginner</span>
+                <h3>Aerial Vehicle Detection</h3>
+                <p><strong>Description:</strong> Detect vehicles from drone footage for traffic monitoring</p>
+                <p><strong>Technologies:</strong> YOLOv8, TensorRT, Jetson Nano, ROS2</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Real-time detection from video stream</li>
+                    <li>Vehicle counting with tracking</li>
+                    <li>Handle motion blur and small objects</li>
+                    <li>Process at 20+ FPS on edge device</li>
+                </ul>
+            </div>
+
+            <h2>6.2 Intermediate Level Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">Semantic Segmentation Pipeline</div>
+                <span class="project-type">IT Company</span>
+                <span class="project-level level-intermediate">Intermediate</span>
+                <h3>Autonomous Driving Scene Understanding</h3>
+                <p><strong>Description:</strong> Pixel-wise segmentation of road scenes for ADAS applications</p>
+                <p><strong>Technologies:</strong> DeepLabV3+, TensorRT, Flask, Docker</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Segment 19+ classes (road, car, pedestrian, etc.)</li>
+                    <li>Real-time video processing at 30 FPS</li>
+                    <li>Web-based visualization dashboard</li>
+                    <li>Achieve >75% mIoU</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Multi-Object Tracking System</div>
+                <span class="project-type">Drone Company</span>
+                <span class="project-level level-intermediate">Intermediate</span>
+                <h3>Dynamic Target Tracking</h3>
+                <p><strong>Description:</strong> Track and follow moving targets from aerial perspective</p>
+                <p><strong>Technologies:</strong> SiamRPN++, ROS2, MAVLink, Gimbal SDK</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Lock onto target with single click</li>
+                    <li>Handle occlusion and reacquisition</li>
+                    <li>Gimbal control to keep target centered</li>
+                    <li>Predict motion for smooth following</li>
+                </ul>
+            </div>
+
+            <h2>6.3 Advanced Level Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">End-to-End Autonomous System</div>
+                <span class="project-type">IT Company</span>
+                <span class="project-level level-advanced">Advanced</span>
+                <h3>Automated Quality Inspection System</h3>
+                <p><strong>Description:</strong> Complete ML pipeline for manufacturing defect detection</p>
+                <p><strong>Technologies:</strong> PyTorch, MLflow, Kubernetes, Prometheus</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Multi-class defect detection</li>
+                    <li>Active learning for continuous improvement</li>
+                    <li>MLOps with CI/CD pipeline</li>
+                    <li>Real-time monitoring and alerting</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Visual SLAM System</div>
+                <span class="project-type">Drone Company</span>
+                <span class="project-level level-advanced">Advanced</span>
+                <h3>Real-time 3D Mapping & Localization</h3>
+                <p><strong>Description:</strong> SLAM for GPS-denied environments with autonomous navigation</p>
+                <p><strong>Technologies:</strong> ORB-SLAM3, ROS2, PCL, Jetson Xavier</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Real-time pose estimation (<50ms latency)</li>
+                    <li>Dense 3D reconstruction</li>
+                    <li>Loop closure detection</li>
+                    <li>Enable autonomous navigation</li>
+                </ul>
+            </div>
+
+            <h2>6.4 Recommended Portfolio Composition</h2>
+            
+            <div class="highlight">
+                <h3>Minimum Viable Portfolio for IT Companies (5 projects):</h3>
+                <ol>
+                    <li>Custom object detector (YOLOv8 on domain-specific data)</li>
+                    <li>Semantic segmentation (road scenes or similar)</li>
+                    <li>Deployed web application (FastAPI + Docker + cloud)</li>
+                    <li>Image similarity search (FAISS + vector embeddings)</li>
+                    <li>One specialized project (healthcare/retail/security)</li>
+                </ol>
+                
+                <h3>Minimum Viable Portfolio for Drone Companies (5 projects):</h3>
+                <ol>
+                    <li>Aerial object detection (optimized for Jetson)</li>
+                    <li>Object tracking from drone (DeepSORT + gimbal control)</li>
+                    <li>Visual odometry or basic SLAM</li>
+                    <li>Autonomous navigation with obstacle avoidance</li>
+                    <li>Complete inspection mission (end-to-end)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="tools" class="page-break">
+            <h1>Part 7: Essential Tools & Technologies</h1>
+            
+            <h2>7.1 Development Tools</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>IDEs:</strong> VSCode, PyCharm, Jupyter Notebooks</li>
+                    <li><strong>Debugging:</strong> pdb, CUDA-GDB for GPU debugging</li>
+                    <li><strong>Profiling:</strong> cProfile, line_profiler, NVIDIA Nsight</li>
+                </ul>
+            </div>
+
+            <h2>7.2 Data Tools</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Annotation:</strong> LabelImg, CVAT, Label Studio, Roboflow</li>
+                    <li><strong>Augmentation:</strong> Albumentations, imgaug</li>
+                    <li><strong>Dataset Management:</strong> DVC, Weights & Biases</li>
+                </ul>
+            </div>
+
+            <h2>7.3 Visualization</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Monitoring:</strong> TensorBoard, Netron for model architecture</li>
+                    <li><strong>Results:</strong> Matplotlib, Seaborn, Plotly</li>
+                    <li><strong>3D:</strong> Open3D for point clouds, Meshlab</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="certifications" class="page-break">
+            <h1>Part 8: Certifications & Credentials</h1>
+            
+            <h2>8.1 Online Courses & Certifications</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Deep Learning Specialization</strong> (Coursera - Andrew Ng)</li>
+                    <li><strong>Computer Vision Nanodegree</strong> (Udacity)</li>
+                    <li><strong>AWS Certified Machine Learning - Specialty</strong></li>
+                    <li><strong>TensorFlow Developer Certificate</strong></li>
+                    <li><strong>ROS for Beginners</strong> (Udemy, Robot Ignite Academy)</li>
+                </ul>
+            </div>
+
+            <h2>8.2 Academic Credentials</h2>
+            <div class="section">
+                <ul>
+                    <li>Bachelor's in Computer Science, Electrical Engineering, or related field</li>
+                    <li>Master's degree preferred for research roles</li>
+                    <li>Publications in CV conferences (CVPR, ICCV, ECCV) highly valued</li>
+                </ul>
+            </div>
+
+            <h2>8.3 Drone-Specific Certifications</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Remote Pilot Certificate</strong> (FAA Part 107 in US, DGCA in India)</li>
+                    <li>Drone operation and safety training</li>
+                    <li>Knowledge of aviation regulations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="interview" class="page-break">
+            <h1>Part 9: Interview Preparation</h1>
+            
+            <h2>9.1 Technical Interview Topics</h2>
+            <div class="section">
+                <ul>
+                    <li>CNN architectures and their evolution</li>
+                    <li>Loss functions and optimization techniques</li>
+                    <li>Model evaluation metrics</li>
+                    <li>Data preprocessing and augmentation strategies</li>
+                    <li>Common CV problems and solutions</li>
+                </ul>
+            </div>
+
+            <h2>9.2 Coding Interviews</h2>
+            <div class="section">
+                <ul>
+                    <li>Implement basic CV algorithms from scratch</li>
+                    <li>Optimize existing code for performance</li>
+                    <li>Debug computer vision pipelines</li>
+                    <li>System design for CV applications</li>
+                </ul>
+            </div>
+
+            <h2>9.3 Project Deep-Dives</h2>
+            <div class="section">
+                <ul>
+                    <li>Explain your project choices and trade-offs</li>
+                    <li>Discuss challenges and solutions</li>
+                    <li>Demonstrate understanding of alternatives</li>
+                    <li>Show ability to iterate and improve</li>
+                </ul>
+            </div>
+
+            <h2>9.4 Drone-Specific Topics</h2>
+            <div class="section">
+                <ul>
+                    <li>Sensor fusion approaches</li>
+                    <li>Real-time processing constraints</li>
+                    <li>Hardware limitations and optimizations</li>
+                    <li>Safety and reliability considerations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="resources" class="page-break">
+            <h1>Part 10: Resources & Learning Materials</h1>
+            
+            <h2>10.1 Essential Books</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Computer Vision: Algorithms and Applications</strong> by Richard Szeliski</li>
+                    <li><strong>Deep Learning for Computer Vision</strong> by Rajalingappaa Shanmugamani</li>
+                    <li><strong>Programming Computer Vision with Python</strong> by Jan Erik Solem</li>
+                    <li><strong>Multiple View Geometry in Computer Vision</strong> by Hartley and Zisserman</li>
+                    <li><strong>Probabilistic Robotics</strong> by Thrun, Burgard, and Fox (for drones)</li>
+                </ul>
+            </div>
+
+            <h2>10.2 Online Resources</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Papers with Code:</strong> Latest research implementations</li>
+                    <li><strong>ArXiv:</strong> Pre-print research papers</li>
+                    <li><strong>Towards Data Science:</strong> Practical tutorials</li>
+                    <li><strong>YouTube:</strong> Two Minute Papers, Yannic Kilcher</li>
+                    <li><strong>GitHub:</strong> Awesome Computer Vision, Awesome SLAM</li>
+                </ul>
+            </div>
+
+            <h2>10.3 Communities</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Reddit:</strong> r/computervision, r/MachineLearning, r/drones</li>
+                    <li><strong>Discord/Slack:</strong> Various CV and ML communities</li>
+                    <li><strong>LinkedIn:</strong> Follow researchers and companies</li>
+                    <li><strong>Twitter/X:</strong> ML/CV researchers and practitioners</li>
+                </ul>
+            </div>
+
+            <h2>10.4 Important Conferences</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>CVPR</strong> - Computer Vision and Pattern Recognition</li>
+                    <li><strong>ICCV</strong> - International Conference on Computer Vision</li>
+                    <li><strong>ECCV</strong> - European Conference on Computer Vision</li>
+                    <li><strong>NeurIPS</strong> - Neural Information Processing Systems</li>
+                    <li><strong>ICRA/IROS</strong> - Robotics conferences (for drone path)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Action Plan: Your Next Steps</h1>
+            
+            <div class="highlight">
+                <h2>Immediate Next Steps (This Month)</h2>
+                <ol>
+                    <li>Assess your current skill level in math and programming</li>
+                    <li>Set up development environment (Python, PyTorch, OpenCV)</li>
+                    <li>Choose your primary focus (IT or Drone path)</li>
+                    <li>Start with foundational course (CS231n or equivalent)</li>
+                    <li>Begin your first hands-on project</li>
+                </ol>
+            </div>
+
+            <div class="note">
+                <h2>3-Month Goals</h2>
+                <ul>
+                    <li>Complete fundamental CV and DL courses</li>
+                    <li>Build 2-3 basic projects</li>
+                    <li>Start contributing to open-source</li>
+                    <li>Join relevant communities</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>6-Month Goals</h2>
+                <ul>
+                    <li>Have 4-5 solid projects in portfolio</li>
+                    <li>Deep expertise in chosen specialization</li>
+                    <li>Begin applying for internships/junior positions</li>
+                    <li>Attend at least one workshop or conference</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>12-Month Goals</h2>
+                <ul>
+                    <li>Professional-level portfolio with 7-10 projects</li>
+                    <li>Active GitHub with contributions</li>
+                    <li>Technical blog with explanations</li>
+                    <li>Ready for mid-level positions</li>
+                    <li>Strong network in the field</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Conclusion</h1>
+            
+            <div class="section">
+                <p><strong>Computer vision is a rapidly evolving field.</strong> Continuous learning, hands-on practice, and staying updated with latest research are key to success.</p>
+                
+                <p>Focus on building a strong foundation, then specialize based on your interests and career goals. Both IT and drone companies value practical problem-solving skills and the ability to deploy working solutions.</p>
+                
+                <div class="warning">
+                    <h3>⚠️ Remember:</h3>
+                    <ul>
+                        <li><strong>Quality over quantity:</strong> 5 excellent projects beat 15 mediocre ones</li>
+                        <li><strong>Document everything:</strong> Your work is only as good as your ability to explain it</li>
+                        <li><strong>Stay curious:</strong> The field evolves rapidly; continuous learning is essential</li>
+                        <li><strong>Network actively:</strong> Join communities, attend conferences, contribute to open-source</li>
+                        <li><strong>Practice consistently:</strong> Code every day, even if just for 30 minutes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Appendix: Quick Reference Tables</h1>
+            
+            <h2>Skills Matrix</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill Category</th>
+                        <th>IT Companies</th>
+                        <th>Drone Companies</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python Programming</td>
+                        <td>✅ Essential</td>
+                        <td>✅ Essential</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>C++ Programming</td>
+                        <td>⚠️ Good to have</td>
+                        <td>✅ Essential</td>
+                        <td>High (Drone)</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Learning (PyTorch/TF)</td>
+                        <td>✅ Essential</td>
+                        <td>✅ Essential</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Platforms (AWS/GCP)</td>
+                        <td>✅ Essential</td>
+                        <td>⚠️ Good to have</td>
+                        <td>High (IT)</td>
+                    </tr>
+                    <tr>
+                        <td>ROS/ROS2</td>
+                        <td>❌ Not needed</td>
+                        <td>✅ Essential</td>
+                        <td>High (Drone)</td>
+                    </tr>
+                    <tr>
+                        <td>Embedded Systems</td>
+                        <td>⚠️ Good to have</td>
+                        <td>✅ Essential</td>
+                        <td>High (Drone)</td>
+                    </tr>
+                    <tr>
+                        <td>MLOps & CI/CD</td>
+                        <td>✅ Essential</td>
+                        <td>⚠️ Good to have</td>
+                        <td>High (IT)</td>
+                    </tr>
+                    <tr>
+                        <td>SLAM & Navigation</td>
+                        <td>❌ Not needed</td>
+                        <td>✅ Essential</td>
+                        <td>High (Drone)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Timeline Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Duration</th>
+                        <th>Key Milestones</th>
+                        <th>Deliverables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Foundations</td>
+                        <td>3-4 months</td>
+                        <td>Math, Programming, Classical CV</td>
+                        <td>1-2 basic projects</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Learning</td>
+                        <td>4-5 months</td>
+                        <td>CNNs, Detection, Segmentation</td>
+                        <td>3-4 intermediate projects</td>
+                    </tr>
+                    <tr>
+                        <td>Specialization</td>
+                        <td>3-4 months</td>
+                        <td>IT/Drone specific skills</td>
+                        <td>2-3 advanced projects</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Topics</td>
+                        <td>Ongoing</td>
+                        <td>Research, Contributions</td>
+                        <td>Portfolio polish, job ready</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Cost Estimation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>IT Path</th>
+                        <th>Drone Path</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computer (GPU)</td>
+                        <td>$1000-2000</td>
+                        <td>$1000-2000</td>
+                        <td>RTX 3060+ recommended</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Credits</td>
+                        <td>$200-500/year</td>
+                        <td>$100-300/year</td>
+                        <td>AWS/GCP free tiers available</td>
+                    </tr>
+                    <tr>
+                        <td>Hardware (Drone/Jetson)</td>
+                        <td>$0</td>
+                        <td>$500-2000</td>
+                        <td>Jetson Nano ($99) to full drone</td>
+                    </tr>
+                    <tr>
+                        <td>Online Courses</td>
+                        <td>$0-500</td>
+                        <td>$0-500</td>
+                        <td>Many free resources available</td>
+                    </tr>
+                    <tr>
+                        <td>Books & Resources</td>
+                        <td>$100-200</td>
+                        <td>$100-200</td>
+                        <td>PDFs often available</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Estimate</strong></td>
+                        <td><strong>$1300-3200</strong></td>
+                        <td><strong>$1700-5000</strong></td>
+                        <td>Can start with minimal investment</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 3px solid #2563eb;">
+            <h2>📄 End of Document</h2>
+            <p style="color: #666;">Generated: December 2025</p>
+            <p style="color: #666;">Complete Computer Vision Career Path Guide</p>
+            <p style="margin-top: 20px;"><strong>Good luck on your computer vision journey! 🚀</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-print dialog hint
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('%c📄 To save as PDF: Press Ctrl+P (Windows/Linux) or Cmd+P (Mac)', 
+                       'font-size: 16px; color: #2563eb; font-weight: bold;');
+        });
+    </script>
+</body>
+</html>
